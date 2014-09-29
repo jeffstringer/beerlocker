@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  font: 14px;
+  font-family: 'Lato', sans-serif;
+  background-color: #FFE5A0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+a:hover {
+  color: red;
+  font-weight: bold;
+}

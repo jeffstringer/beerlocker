@@ -4,6 +4,7 @@
   "dependencies": {
     "body-parser": "^1.9.0",
     "express": "^4.9.5",
+    "hjs": "0.0.6",
     "mongoose": "^3.8.16"
   }
 }

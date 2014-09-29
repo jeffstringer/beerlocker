@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+
+    {{#beer}}
+      <p>
+        <span>
+          <form action="/update/{{_id}}" method="post" accept-charset="utf-8">
+            <input type="text" name="name" value="{{name}}" placeholder="name" />
+            <input type="text" name="type" value="{{type}}" placeholder="type" />
+            <input type="text" name="quantity" value="{{quantity}}" placeholder="quantity"/>
+            <button type="submit" class="btn btn-success">Update</button>
+          </form>
+        </span>
+      </p>
+    {{/beer}}
+  </body>
+</html>

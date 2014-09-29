@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hipster Beer Locker</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+          {{#beers}}
+            <p>
+              <span>
+                Name: <a href="/beer/{{_id}}">{{name}}</a>
+                Type: {{type}}
+                Qty: {{quantity}}
+              </span>
+              <span>
+                <a href="/destroy/{{_id}}">Delete</a>
+                <a href="/edit/{{_id}}">Edit</a>
+              </span>
+            </p>
+          {{/beers}}
+    <form action="create" method="post" accept-charset="utf-8">
+      <input type="text" name="name" placeholder="name" />
+      <input type="text" name="type" placeholder="type" />
+      <input type="text" name="quantity" placeholder="quantity" />
+      <button type="submit" class="btn btn-success">Add</button>
+    </form>
+  </body>
+</html>
