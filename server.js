@@ -19,12 +19,12 @@ app.set( 'view engine', 'hjs' );
 
 mongoose.connect('mongodb://localhost:27017/beerlocker');
 
-app.use('/', router);
-app.get('/', routes.index);
+app.use('/beers', router);
+app.get('/beers', routes.index);
 app.post('/create', routes.create);
 app.get('/edit/:id', routes.edit);
 app.post('/update/:id', routes.update);
-app.get('/beer/:id', routes.beer);
+app.get('/beers/:id', routes.show);
 app.get('/destroy/:id', routes.destroy);
 
 app.listen(port);

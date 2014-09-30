@@ -11,7 +11,7 @@
           {{#beers}}
             <p>
               <span>
-                Name: <a href="/beer/{{_id}}">{{name}}</a>
+                Name: <a href="/beers/{{_id}}">{{name}}</a>
                 Type: {{type}}
                 Qty: {{quantity}}
               </span>

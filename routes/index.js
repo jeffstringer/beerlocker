@@ -53,11 +53,11 @@ exports.edit = function(req, res) {
   });
 };
 
-exports.beer = function(req, res) {
+exports.show = function(req, res) {
   Beer.
     findById(req.params.id).
     exec(function(err, beer) {
-      res.render('beer', {
+      res.render('show', {
         title: "More about yer beer:",
         beer: beer
       });
