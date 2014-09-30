@@ -21,7 +21,7 @@ exports.create = function(req, res) {
     if(err) {
       res.send(err);
     }
-    res.redirect('/');
+    res.redirect('/beers');
   });
 };
 
@@ -37,7 +37,7 @@ exports.update = function(req, res) {
       if(err) {
         res.send(err);
       }
-    res.redirect('/');
+    res.redirect('/beers');
     });
   });
 };
@@ -68,6 +68,6 @@ exports.destroy = function(req, res) {
   Beer.findByIdAndRemove(req.params.id, function(err, beer) {
     if (err)
       res.send(err);
-    res.redirect('/');
+    res.redirect('/beers');
   });
 };
